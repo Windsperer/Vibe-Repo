@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>...</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 500px;
+        margin: 100px auto;
+        padding: 0 20px;
+        text-align: center;
+      }
+
+      h1 { font-size: 2.4rem; margin-bottom: 16px; }
+      p  { font-size: 1.1rem; line-height: 1.6; }
+
+      a {
+        display: inline-block;
+        margin-top: 40px;
+        color: #999;
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+
+      a:hover { text-decoration: underline; }
+    </style>
+  </head>
+
+  <body>
+    <div id="content"></div>
+
+    <script>
+      var params = new URLSearchParams(window.location.search);
+      var answer = params.get("answer");
+      var content = document.getElementById("content");
+
+      if (answer === "yes") {
+        document.body.style.backgroundColor = "#fffbea";
+        content.innerHTML = `
+          <h1 style="color: #e6a817;">🎂 ENHORABUENA 🎂</h1>
+          <h2 style="color: #e6a817;"> por no estar muerto</h2>
+          <p>por trigésimo cuarto año consecutivo. <br>
+
+            Ten en cuenta que el mundo se aproxima a un final escalofriante y devastador.
+            Pero si ese nuestro destino, agradezco haber compartido el trayecto contigo.</p>
+          <a href="index.html">← si has dejado de ser mi hermano en este lapso, pincha aquí</a>
+        `;
+      } else {
+        document.body.style.backgroundColor = "#fff0f0";
+        content.innerHTML = `
+          <h1 style="color: #cc3333;">TE ODIO.</h1>
+          <p>Tu presencia corrompe los cimientos de la creación. Por favor, abandona mi vista
+            inmediatamente de inmediato.</p>
+          <a href="index.html">← Vete</a>
+        `;
+      }
+    </script>
+  </body>
+</html>
