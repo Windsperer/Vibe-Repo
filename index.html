@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- The head section contains info about the page, not visible content -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My First Webpage</title>
+
+    <!-- Style tag is where you write CSS to control how things look -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 0 20px;
+        background-color: #f5f5f5;
+        color: #333;
+      }
+
+      h1 {
+        color: #2c7be5;
+      }
+
+      .card {
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      button {
+        background-color: #2c7be5;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #1a5cbf;
+      }
+
+      #message {
+        margin-top: 12px;
+        font-weight: bold;
+        color: #2c7be5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- The body section contains everything visible on the page -->
+
+    <!-- Headings go from h1 (biggest) to h6 (smallest) -->
+    <h1>Hello, World!</h1>
+    <h2>Welcome to my first webpage</h2>
+
+    <!-- A paragraph of text -->
+    <p>This is a simple HTML page. HTML is the language used to build webpages.</p>
+
+    <!-- A card section to group related content -->
+    <div class="card">
+      <h3>Things HTML can do:</h3>
+
+      <!-- An unordered (bulleted) list -->
+      <ul>
+        <li>Display text and headings</li>
+        <li>Show images</li>
+        <li>Create buttons and forms</li>
+        <li>Link to other pages</li>
+      </ul>
+    </div>
+
+    <!-- Another card with an interactive example -->
+    <div class="card">
+      <h3>Try this button:</h3>
+      <p>Click the button below. JavaScript will make something happen!</p>
+
+      <!-- onclick runs JavaScript code when the button is clicked -->
+      <button onclick="showMessage()">Click me!</button>
+
+      <!-- This paragraph starts empty. JavaScript will fill it in. -->
+      <p id="message"></p>
+    </div>
+
+    <!-- Script tag is where you write JavaScript (the logic/behavior of the page) -->
+    <script>
+      function showMessage() {
+        // getElementById finds an element on the page by its id
+        document.getElementById("message").textContent = "It works! You just ran JavaScript.";
+      }
+    </script>
+  </body>
+</html>
